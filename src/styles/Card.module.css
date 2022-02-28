@@ -1,0 +1,23 @@
+.Card1 {
+  width: 400px;
+  height: 400px;
+  background: #ff6e86;
+  position: relative;
+  border: 1px solid #fff;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.Card1 h2 {
+  color: #ffffff;
+  position: absolute;
+  left: 40%;
+  top: 8%;
+}
+.Card1 div {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+}

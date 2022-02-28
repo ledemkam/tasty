@@ -1,0 +1,9 @@
+.Header {
+  width: 100%;
+  height: 10vh;
+}
+
+.Header img {
+  width: 100px;
+  margin-left: 50%;
+}

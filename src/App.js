@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import DetailsCategory from "./Pages/DetailsCategory";
+import Random from "./Pages/Random";
 
-function App() {
+import Home from "./Pages/Home";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/DetailsCategory/:id" element={<DetailsCategory />} />
+      <Route path="/Random/:id" element={<Random />}></Route>
+    </Routes>
   );
-}
+};
 
 export default App;
