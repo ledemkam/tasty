@@ -4,13 +4,14 @@ import DetailsCategory from "./Pages/DetailsCategory";
 import Random from "./Pages/Random";
 
 import Home from "./Pages/Home";
+import routes from "./config/routes";
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/DetailsCategory/:id" element={<DetailsCategory />} />
-      <Route path="/Random/:id" element={<Random />}></Route>
+      <Route path={routes.HOME} element={<Home />} />
+      <Route path={routes.DETAILSCATEGORY} element={<DetailsCategory />} />
+      <Route path={routes.RANDOM} element={<Random />}></Route>
     </Routes>
   );
 };

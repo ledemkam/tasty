@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { myContext } from "../Context/context";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
+import routes from "../config/routes";
 
 const Home = () => {
   const { fetchCategories, categories } = useContext(myContext);
@@ -35,12 +36,12 @@ const Home = () => {
 
       <div className={classes.result}>
         {categories.map((item) => (
-          <Link to="/DetailsCategory/:id">
+          <Link to={routes.DETAILSCATEGORY}>
             {" "}
             <Card1 key={item.idCategory} item={item} />
           </Link>
         ))}
-        <Link to="/Random/:id">
+        <Link to={routes.RANDOM}>
           <div className={classes.radom}>
             <h2>Random</h2>
           </div>
