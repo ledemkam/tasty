@@ -1,7 +1,8 @@
 const routes = {
   HOME: "/",
-  DETAILSCATEGORY: "/DetailsCategory/:id",
-  RANDOM: "/Random/:id",
+  DETAILSCATEGORY: "/DETAILSCATEGORY/:id",
+  CATEGORYITEM: "/CATEGORYITEM/:idMeal",
+  RANDOM: "/Random",
 };
 
 export default routes;

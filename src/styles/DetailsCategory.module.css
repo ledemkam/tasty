@@ -18,6 +18,7 @@
   border: 2px solid #ff6e86;
   margin-top: 15px;
   margin-left: 45px;
+  background: rgba(255, 172, 97, 0.3);
 }
 .DetailsCategory div form button {
   background: #ff6e86;

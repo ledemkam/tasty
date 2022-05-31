@@ -1,17 +1,26 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "../styles/Random.module.css";
-import { myContext } from "../Context/context";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import routes from "../config/routes";
 
 const Random = () => {
-  const { randomMeal, fetchRandomMeal } = useContext(myContext);
+  const [randomMeal, setRandomMeal] = useState([]);
+
   const handleClick = (event) => {
     event.preventDefault();
   };
   useEffect(() => {
-    fetchRandomMeal();
-  }, [fetchRandomMeal]);
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/random.php`)
+      .then((res) => {
+        console.log(res.data.meals);
+        setRandomMeal(res.data.meals);
+      });
+  }, []);
+
   return (
     <div className={classes.random} onClick={handleClick}>
       <Header />
@@ -19,7 +28,10 @@ const Random = () => {
         <div key={meal.idMeal} className={classes.randomgrid}>
           <div className={classes.randomgridcontrols}>
             <img src={meal.strMealThumb} alt="#" />
-            <button onClick={fetchRandomMeal}> Generate Another Meal</button>
+            <Link to={routes.RANDOM}>
+              {" "}
+              <button> Generate Another Meal</button>
+            </Link>
           </div>
 
           <div className={classes.randomgridinstructions}>

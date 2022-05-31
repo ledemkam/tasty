@@ -1,18 +1,22 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import Card1 from "../Components/Card1";
 import classes from "../styles/Home.module.css";
 import { Link } from "react-router-dom";
-import { myContext } from "../Context/context";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import routes from "../config/routes";
+import axios from "axios";
 
 const Home = () => {
-  const { fetchCategories, categories } = useContext(myContext);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetchCategories();
-  }, [fetchCategories]);
+    axios
+      .get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+      .then((res) => {
+        setCategories(res.data.categories);
+      });
+  }, []);
 
   const submittedTaskHandler = (event) => {
     event.preventDefault();
@@ -36,7 +40,7 @@ const Home = () => {
 
       <div className={classes.result}>
         {categories.map((item) => (
-          <Link to={routes.DETAILSCATEGORY}>
+          <Link to={routes.CATEGORYITEM}>
             {" "}
             <Card1 key={item.idCategory} item={item} />
           </Link>

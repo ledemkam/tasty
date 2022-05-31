@@ -1,0 +1,149 @@
+.DetailsCategoryItem {
+  width: 100%;
+  height: 1700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.Header {
+  width: 100%;
+  height: 10vh;
+}
+
+.Header img {
+  width: 100px;
+  margin-left: 50%;
+}
+
+.DetailsCategoryItem div form {
+  width: 100%;
+  height: 10vh;
+}
+.DetailsCategoryItem div form label {
+  color: #ff6e86;
+  font-size: 30px;
+}
+
+.DetailsCategoryItem div form input {
+  height: 3vh;
+  border-radius: 5px;
+  border: 2px solid #ff6e86;
+  margin-top: 15px;
+  margin-left: 45px;
+  background: rgba(255, 172, 97, 0.3);
+}
+.DetailsCategoryItem div form button {
+  background: #ff6e86;
+  border: 1px solid #fff;
+  height: 4vh;
+  width: 80px;
+  margin-left: 5px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.detail {
+  width: 80%;
+  background: #ff6e86;
+  height: 180vh;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 5%;
+}
+
+.mealsdetail {
+  margin-left: 20%;
+  margin-top: 30px;
+}
+
+.mealsdetail .figure {
+  width: 70%;
+}
+
+.mealsdetail .figure img {
+  width: 100%;
+}
+
+.ingredients {
+  display: flex;
+  width: 675px;
+  justify-content: space-evenly;
+}
+
+.ingredients .Instructions {
+  width: 500px;
+  height: 200px;
+}
+.ingredients .Instructions {
+  paddind-right: 10px;
+}
+
+.ingredients .ingred {
+  width: 150px;
+  height: 200px;
+}
+
+.ingredients .ingred li {
+  list-style-type: none;
+}
+
+.ingredients .ingred button {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ff6e86;
+  color: #ff6e86;
+  font-weight: bold;
+}
+
+.modalo {
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(49, 49, 49, 0.8);
+}
+.modal {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 3px;
+  max-width: 600px;
+  min-width: 300px;
+}
+.modalcontent p {
+  line-height: 1.4;
+}
+.closemodal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 7px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+  margin-top: 10%;
+}
+
+.footer div {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  height: 50px;
+}
